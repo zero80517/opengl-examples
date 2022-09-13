@@ -15,3 +15,5 @@ _deps
 **/glfw-3.3.8.bin.WIN64
 **/out
 **/.vs
+**/.idea
+.vscode
