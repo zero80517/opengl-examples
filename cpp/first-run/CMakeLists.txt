@@ -17,7 +17,10 @@ target_link_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/../3rdpart
 find_package(OpenGL REQUIRED)
 
 # Put all libraries into a variable
-set(LIBS glfw3 opengl32)
+# NOTE pthread and dl libs are required for linux
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+set(LIBS glfw3 OpenGL::GL ${CMAKE_DL_LIBS} Threads::Threads)
 
 # link libs
 target_link_libraries(${PROJECT_NAME} ${LIBS})
