@@ -9,9 +9,9 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 # add glfw3 lib
 ## include path for target
-target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/../glfw-3.3.8.bin.WIN64/include")
+target_include_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/../3rdparty/include")
 ## add lib directory
-target_link_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/../glfw-3.3.8.bin.WIN64/lib-vc2019")
+target_link_directories(${PROJECT_NAME} PUBLIC "${PROJECT_SOURCE_DIR}/../3rdparty/libs")
 
 # check OpenGL
 find_package(OpenGL REQUIRED)
