@@ -17,5 +17,6 @@ _deps
 **/.idea
 .vscode
 **/build-**
+**/build
 **/include/**
 **/libs/**
